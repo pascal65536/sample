@@ -1,18 +1,33 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, flash, redirect, session
+from werkzeug.exceptions import abort
 
 
 application = Flask(__name__)
+application.config.from_pyfile("app.config")
 
 
+def func(a,b,op):
+    if op == 'sum':
+        return a + b, 'a + b'
+    if op == 'dif':
+        return a - b, 'a - b'
+    if op == 'pow':
+        return a ** b, 'a ** b'
+    if op == 'mul':
+        return a * b, 'a * b'
+    if op == 'dig':
+        return a / b, 'a / b'
+    return 'Используй: sum, dif, pow, mul, dig', ''
+        
 @application.route('/')
 def index():
-    name = 'Username'
-    return render_template('index.html', title='Welcome', username=name)
+    a = request.args.get('a', default =None, type=int)
+    b = request.args.get('b', default =None, type=int)
+    op = request.args.get('op', default =None, type=str)
+    result, formula = func(a,b,op)
+    
+    return render_template('index.html', formula=formula, result=result)
 
-
-@application.route('/about/')
-def about():
-    return '<h3>This is a Flask web application.</h3>'
 
 
 if __name__ == "__main__":
