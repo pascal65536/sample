@@ -17,10 +17,6 @@ if __name__ == "__main__":
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([youtube])
 
-    import ipdb
-
-    ipdb.set_trace()
-
     info_dict = dict()
     youtube = "https://www.youtube.com/watch?v=Mu4_zNCaymA"
     with youtube_dl.YoutubeDL({"quiet": True}) as ydl:
