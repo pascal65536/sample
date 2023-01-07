@@ -2,7 +2,7 @@ from PIL import Image
 
 
 if __name__ == "__main__":
-    inputfile = "/home/pascal65536/Загрузки/2.jpg"
+    inputfile = "2.jpg"
 
     input_im = Image.open(inputfile)
     if input_im.mode != "RGBA":

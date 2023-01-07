@@ -44,6 +44,6 @@ def is_triangle(a, b, c):
 
 if __name__ == "__main__":
     print("d" * 80)
-    a + b + c - a < a
-    a + b + c - b < b
-    a + b + c - c < c
+    # a + b + c - a < a
+    # a + b + c - b < b
+    # a + b + c - c < c
