@@ -4,7 +4,7 @@
 n = 1
 summ = 0
 while n <= 1234:
-    summ +=1/(2*n-1) * ((-1)**(n-1))
+    summ += 1 / (2 * n - 1) * ((-1) ** (n - 1))
     n += 1
 
-print(summ*4)
+print(summ * 4)

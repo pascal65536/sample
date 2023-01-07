@@ -5,15 +5,15 @@ counter = 0
 
 while True:
     counter = counter + 1
-    num = input('Введите число от 0 до 100: ')
+    num = input("Введите число от 0 до 100: ")
     if not num.isdigit():
-        print('Это не число')
+        print("Это не число")
     elif int(num) > secret:
-        print('Перелёт')
+        print("Перелёт")
     elif int(num) < secret:
-        print('Недолёт')
+        print("Недолёт")
     elif int(num) == secret:
-        print('Попал!')        
+        print("Попал!")
         break
 
-print('Игра окончена', counter, 'Попыток' )
+print("Игра окончена", counter, "Попыток")

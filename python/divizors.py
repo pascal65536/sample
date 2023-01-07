@@ -2,7 +2,7 @@
 
 import time
 
-num = int(input('Enter number: '))
+num = int(input("Enter number: "))
 max_divizors = num // 2
 is_prime = False
 start_time = time.time()

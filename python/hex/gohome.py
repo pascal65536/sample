@@ -12,16 +12,16 @@ def walk(fp):
     # import ipdb; ipdb.set_trace()
     for address, dirs, files in os.walk(fp):
         for dir in dirs:
-            if dir[0] == '.':
+            if dir[0] == ".":
                 continue
             fp = os.path.join(address, dir)
             ret.append(fp)
     return ret
 
 
-if __name__ == '__main__':
-    filepath = '/media/pascal65536/021F03A515315EB5/Фотокамера'
-    filepath_src = '/media/pascal65536/021F03A515315EB5/Фотокамера/Фотокамера'
+if __name__ == "__main__":
+    filepath = "/media/pascal65536/021F03A515315EB5/Фотокамера"
+    filepath_src = "/media/pascal65536/021F03A515315EB5/Фотокамера/Фотокамера"
     filepath_lst = walk(filepath_src)
     for fp in filepath_lst:
         for address, dirs, files in os.walk(fp):

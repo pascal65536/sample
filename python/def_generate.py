@@ -1,5 +1,6 @@
 def generate(count=10):
     import random
+
     i = 0
     random_lst = list()
     while i < count:

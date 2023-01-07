@@ -6,12 +6,12 @@ sum = 0
 i = 10
 
 while i <= nat:
-    print('i=', i)
+    print("i=", i)
     sum = sum + i
-    i = i + .01
+    i = i + 0.01
     # if sum > 100:
     #     break
 else:
-    print('Цикл закончился')
+    print("Цикл закончился")
 
 print("Сумма чисел от 10 до n =", sum)
